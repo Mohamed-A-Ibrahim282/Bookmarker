@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookmarker</title>
+    <link rel="icon" href="img/bookmark.png">
+
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <div class="w-75 m-auto">
+        <h1 class="text-center my-5 display-4 position-relative">
+            Bookmarker
+            <div class="layer"></div>
+        </h1>
+        <div class="line"></div>
+        <div class="d-flex justify-content-center my-4">
+            <h5 class="fs-3">
+                <i class="fa-solid fa-bookmark"></i>
+                Bookmark your favorite sites
+                <i class="fa-solid fa-bookmark"></i>
+            </h5>
+        </div>
+
+        <div>
+            <label class="fw-bold" for="siteName"><i class="fa-solid fa-book-bookmark"></i> Site Name</label>
+            <input oninput="bookmarkNameValidation()" type="text" class="form-control my-3" placeholder="Bookmark Name" id="siteName">
+
+            <label class="fw-bold" for="siteUrl"><i class="fa-solid fa-link"></i> Site URL</label>
+            <input oninput="bookmarkUrlValidation()" type="text" class="form-control my-3" placeholder="Website URL" id="siteUrl">
+
+            <div class="text-center">
+                <button onclick="addBookmark()" class="sub rounded-3 my-3">Submit</button>
+            </div>
+
+            <div class="line my-4"></div>
+        </div>
+
+        <div>
+            <input oninput="searchBookmark(this.value)" class="form-control my-4" type="text" placeholder="search..." id="searchBookmark">
+
+            <table class="table table-striped text-center">
+                <thead>
+                    <th>ID</th>
+                    <th>Website Name</th>
+                    <th>Visit</th>
+                    <th>Delete</th>
+                </thead>
+
+                <tbody id="tbody">
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
